@@ -39,7 +39,7 @@ type Starship struct {
 }
 
 func parseAsType(entityType reflect.Type, body []byte) interface{} {
-	var entity entityType{}
+	var entity interface{}
 	err := json.Unmarshal(body, &entity)
 	if err != nil {
 		log.Fatalln("JSON Error: ", err)
